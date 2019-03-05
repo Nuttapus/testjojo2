@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript" src="scripts.js"></script>
+    <title>รายงาน</title>
+  </head>
+  <body>
+      <script>
+           
+
+           window.onload = function () {
+        var a1=localStorage.getItem("prefixThai");
+           var a3= localStorage.getItem("nickname");
+           var a4=localStorage.getItem("city");
+           var a5=localStorage.getItem("homeNumber");
+           var a6=localStorage.getItem("name");
+           var a7=localStorage.getItem("birthday");
+           var a8=localStorage.getItem("aumpher");
+           var a9=localStorage.getItem("road");
+           var a10=localStorage.getItem("lastname");
+           var a11=localStorage.getItem("tumbon");
+           var a12=localStorage.getItem("id");
+           var a13=localStorage.getItem("post");
+           var a14=localStorage.getItem("telHome");
+           var a15=localStorage.getItem("tel");
+           var a16=localStorage.getItem("mobile");
+
+               document.getElementById("prefixThai").innerHTML = "คำนำหน้าชื่อ: "+a1;
+               document.getElementById("nickname").innerHTML = "ชื่อเล่น: "+a3;
+               document.getElementById("city").innerHTML = "จังหวัด: "+a4;
+               document.getElementById("homeNumber").innerHTML = "บ้านเลขที่: "+a5;
+               document.getElementById("name").innerHTML = "ชื่อ: "+a6;
+               document.getElementById("birthday").innerHTML = "วัน/เดือน/ปี เกิด: "+a7;
+               document.getElementById("aumpher").innerHTML = "อำเภอ/เขต: "+a8;
+               document.getElementById("road").innerHTML = "ถนน: "+a9;
+               document.getElementById("lastname").innerHTML = "นามสกุล: "+a10;
+               document.getElementById("tumbon").innerHTML = "ตำบล/แขวง: "+a11;
+               document.getElementById("id").innerHTML = "หมายเลขบัตรประจำตัวประชาชน: "+a12;
+               document.getElementById("post").innerHTML = "รหัสไปรษณีย์: "+a13;
+               document.getElementById("telHome").innerHTML = "เบอร์โทรศัพท์: "+a14;
+               document.getElementById("tel").innerHTML = "โทรสาร: "+a15;
+               document.getElementById("mobile").innerHTML = "เบอร์โทรศัพท์มือถือ: "+a16;
+           }
+      </script>
+    <div class="box">
+      <h1>รายงานข้อมูลผู้สมัคร สส.เขต</h1>
+      <br>
+      <div class="row">
+        <div class="column">
+            <p id="prefixThai"></p>
+            <p id="name"></p>
+            <p id="nickname"></p>
+            <p id="city"></p>
+           <p id="homeNumber"></p>
+            <p id="telHome"></p>
+            <p id="email"></p>
+        </div>
+        <div class="column">
+                <p id="lastname"></p>
+                <p id="birthday"></p>
+                <p id="aumpher"></p>
+                <p id="road"></p>
+               <p id="tel"></p>
+            </div>
+            <div class="column">
+                <p id="id"></p>
+                <p style="visibility:hidden">คำนำหน้าชื่อ:<p ></p></p>
+                <p id="tumbon"></p>
+                <p id="post"></p>
+                <p id="mobile"></p>
+            </div>
+      </div>
+    </div>
+    <br>
+<div class="box">
+        
+                <div class="n">
+                        <button class="button2 button21" type="button" >
+                        ปริ้น
+                      </button>
+                      <button class="button2 button21" type="button" onclick="window.location.href='./index.html'">
+                        ยกเลิก
+                      </button>
+                    </div>
+            
+    </div>
+  </body>
+</html>

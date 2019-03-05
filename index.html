@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript" src="scripts.js"></script>
+    <title>หน้าจอการลงทะเบียน</title>
+   
+  </head>
+  <body>
+
+    <div>
+      <table>
+        <tr>
+          <td>
+            <img src="img/Icon01.png" width="40" height="40" />
+          </td>
+          <td>
+            ในขั้นตอนที่ 1 ทำการลงทะเบียนก่อน เพื่อรับ
+            <strong>ชื่อผู้ใช้ </strong> และ <strong>รหัสผ่าน</strong><br />
+            ใช้ในการกรอกใบสมัครในขั้นตอนที่ 2
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br /><br />
+    <div class="box">
+      <h1>ข้อมูลทั่วไป [ภาษาไทย]</h1>
+      <br />
+      <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+        <u>หมายเลขบัตรประจำตัวประชาชน</u>
+        <input type="text" id="id" onkeypress="return isNumber1(event);" maxlength="13" />
+      </p>
+      <div class="row">
+        <div class="column">
+          <p>
+            <u>คำนำหน้าชื่อ</u>
+            <select required id="prefixThai">
+                <option value="" disabled selected hidden>เลือก...</option>
+                <option value="นาย">นาย</option>
+                <option value="นาง">นาง</option>
+                <option value="นางสาว">นางสาว</option>
+            </select>
+          </p>
+          <p>
+            <u>ชื่อเล่น</u>
+            <input type="text" id="nickname" />
+          </p>
+          <p>
+            <u>จังหวัด</u>
+            <select id="city">
+                    <option value="ชลบุรี">ชลบุรี</option>
+                    <option value="สระแก้ว">สระแก้ว</option>
+                    <option value="ระยอง">ระยอง</option>
+                    <option value="จันทบุรี">จันทบุรี</option>
+                    <option value="ตลาด">ตลาด</option>
+                  </select>
+          </p>
+          <p>
+            <u>บ้านเลขที่</u>
+            <input type="text" id="homeNumber" />
+          </p>
+          <p>
+            <u>โทรศัพท์</u>
+            <input type="text" id="telHome" onkeypress="return isNumber3(event)" maxlength="9"/>
+          </p>
+        <div>
+          <p >
+                <u>อีเมล์</u>
+                <input type="text" id="email" size="40"/>
+                <p style="color:red">*ใช้ในการรับรหัสผ่าน กรณีลืมรหัสผ่าน</p>
+              </p>
+              </div>
+            </div>
+       
+        <div class="column">
+          <p>
+            <u>ชื่อ</u>
+            <input type="text" id="name" />
+          </p>
+          <p>
+                
+                <div class="quesadilla">
+                        <u>วัน/เดือน/ปี เกิด</u>
+                          <input type="date" id="datepickerfrom"> 
+                      </div>
+          </p>
+          <p>
+            <u>อำเภอ/เขต</u>
+            <input type="text" id="aumpher" />
+          </p>
+          <p>
+            <u>ถนน</u>
+            <input type="text" id="road" />
+          </p>
+          <p>
+            <u>โทรสาร</u>
+            <input type="text" id="tel" onkeypress="return isNumber4(event)" maxlength="9"/>
+          </p>
+        </div>
+        <div class="column">
+          <p>
+            <u>นามสกุล</u>
+            <input type="text" id="lastname" />
+          </p>
+          <p  style="visibility:hidden">
+            <u>นามสกุล</u>
+            <input type="text" />
+          </p>
+          <p >
+                <u>ตำบล/แขวง</u>
+                <select id="tumbon">
+                        <option value="บางทราย">บางทราย</option>
+                        <option value="นาป่า">นาป่า</option>
+                        <option value="บ้านสวน">บ้านสวน</option>
+                        <option value="อ่างศิลา">อ่างศิลา</option>
+                        <option value="ห้วยกะปิ">ห้วยกะปิ</option>
+                      </select>
+              </p>
+              <p >
+                    <u>รหัสไปรษณีย์</u>
+                    <input type="text" id="post" onkeypress="return isNumber2(event)" maxlength="5" />
+                  </p>
+                  <p >
+                        <u>เบอร์โทรศัพท์มือถือ</u>
+                        <input type="text" id="mobile"  onkeypress="return isNumber5(event)" maxlength="10"/>
+                      </p>
+                      
+        </div>
+      </div>
+      <h1>ข้อมูลทั่วไป [ภาษาอังกฤษ]</h1>
+      <div class="row">
+          <div class="column">
+                <p >
+                        <u>Profix</u>
+                        <select id="profix">
+                                <option value="mr">Mr.</option>
+                                <option value="mrs">Mrs.</option>
+                                <option value="miss">Miss</option>
+                              </select>
+                      </p>
+              </div>
+              <div class="column">
+                    <p >
+                            <u>First name</u>
+                            <input type="text" id="nameEng" />
+                          </p>
+                </div>
+                <div class="column">
+                        <p >
+                                <u>Last name</u>
+                                <input type="text" id="lastnameEng" />
+                              </p>
+                    </div>
+          
+                </div>
+                <div class="row">
+    <div class="m">
+        <div class="n">
+                <button class="button button3" type="button" onclick="submit()">
+                บันทึก
+              </button>
+              <button class="button button3" type="button"onclick="reloadPage()">
+                ยกเลิก
+              </button>
+            </div>
+        </div>
+    </div>
+    </div>
+  </body>
+</html>
